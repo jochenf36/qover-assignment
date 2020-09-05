@@ -8,7 +8,7 @@ import Quote from './pages/Quote/Quote.lazy';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Switch>
         <Route exact path="/">
           <SignIn />

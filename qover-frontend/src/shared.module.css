@@ -1,0 +1,12 @@
+.label {
+  margin: 20px 0px 10px 0px;
+  display: block;
+  font-family: Roboto;
+  font-size: 10px !important;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--blue-grey);
+}
