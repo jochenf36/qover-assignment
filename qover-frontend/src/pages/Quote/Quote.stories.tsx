@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Login from './Login';
+import Quote from './Quote';
 
-storiesOf('Login', module).add('default', () => <Login />);
+storiesOf('Quote', module).add('default', () => <Quote />);

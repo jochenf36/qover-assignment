@@ -2,22 +2,22 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
-import Login from './pages/Login/Login.lazy';
-import Configurator from './pages/Configurator/Configurator.lazy';
-import PlanOverview from './pages/PlanOverview/PlanOverview.lazy';
+import SignIn from './pages/SignIn/SignIn.lazy';
+import Car from './pages/Car/Car.lazy';
+import Quote from './pages/Quote/Quote.lazy';
 
 function App() {
   return (
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Login />
+          <SignIn />
         </Route>
-        <Route path="/configurator">
-          <Configurator />
+        <Route path="/car">
+          <Car />
         </Route>
-        <Route path="/planOverview">
-          <PlanOverview />
+        <Route path="/quote">
+          <Quote />
         </Route>
       </Switch>
     </div>
