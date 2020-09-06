@@ -1,0 +1,20 @@
+:root {
+  --footer-height: 49px;
+}
+
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: calc(var(--footer-height) + 2%);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: var(--footer-height);
+  border: solid 1px var(--white-20);
+}

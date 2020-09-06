@@ -1,5 +1,5 @@
 .SignIn {
-  margin-top: 60px;
+  padding-top: 60px;
   text-align: center;
 }
 
@@ -73,6 +73,8 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 .bottom {
@@ -94,8 +96,13 @@
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .askAccess {
   text-decoration: underline;
+}
+
+.unknownUser {
+  margin-bottom: 10px;
 }
