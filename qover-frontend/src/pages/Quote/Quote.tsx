@@ -37,18 +37,23 @@ const Quote: React.FC = () => {
     setSelectedPaymentPlan(selectedPaymentPlan === YEARLY ? MONTHLY : YEARLY);
   };
 
+  const styleMonthly =
+    selectedPaymentPlan === MONTHLY ? styles.selectedPaymentPlan : '';
+  const styleYearly =
+    selectedPaymentPlan === YEARLY ? styles.selectedPaymentPlan : '';
+
   return (
     <div className={styles.Quote}>
       <h1 className={styles.title}>Select a plan</h1>
 
       <div className={styles.planType}>
-        <span>Pay Monthly</span>
+        <span className={styleMonthly}>Pay Monthly</span>
         <Switch
           defaultChecked
           className={styles.toggle}
           onChange={onPaymentMethodChanged}
         />
-        <span>Pay Yearly</span>
+        <span className={styleYearly}>Pay Yearly</span>
       </div>
 
       <div className={styles.quoteDetails}>

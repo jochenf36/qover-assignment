@@ -67,7 +67,7 @@ export function formatBelgiumStyle(price: Dinero.Dinero): string {
   //TODO check if there is no better way to format to Belgium Style
   return (
     price
-      .toFormat('0,0.0')
+      .toFormat('0,0.00')
       .replace(',', 'tmp')
       .replace('.', ',')
       .replace('tmp', '.') + ' EUR'

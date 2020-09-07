@@ -60,3 +60,7 @@
   color: #ffffff;
   text-decoration: underline;
 }
+
+.selectedPaymentPlan {
+  font-weight: bold;
+}
