@@ -1,13 +1,7 @@
 import React from 'react';
 import styles from './Car.module.css';
 import { InputNumber, Select, Form } from 'antd';
-import {
-  models,
-  calculatePrice,
-  Model,
-  UNIVERSAL_PLAN,
-  formatPrice,
-} from '../../helpers/carHelpers';
+import { models } from '../../helpers/quoteHelpers';
 import { useHistory } from 'react-router-dom';
 import { PATH_QUOTE } from '../../App';
 
