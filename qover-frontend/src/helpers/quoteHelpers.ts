@@ -1,19 +1,6 @@
 import Dinero from 'dinero.js';
-
-export type Model = 'Audi' | 'BMW' | 'PORSCHE';
-const AUDI: Model = 'Audi' as Model;
-const BMW: Model = 'bmw' as Model;
-const PORSCHE: Model = 'porsche' as Model;
-
-type Plan = 'global' | 'universal';
-export const GLOBAL_PLAN: Plan = 'Audi' as Plan;
-export const UNIVERSAL_PLAN: Plan = 'bmw' as Plan;
-
-export const models = {
-  audi: AUDI,
-  bmw: BMW,
-  porsche: PORSCHE,
-};
+import { Model, Plan } from '../types';
+import { GLOBAL_PLAN, models } from '../constants';
 
 const AUDI_DEFAULT = 250 * 100;
 const BMW_DEFAULT = 150 * 100;
@@ -25,13 +12,12 @@ const PORSCHE_PERCENTAGE = 70;
 
 const EUR = 'EUR';
 
-export function calculatePrice(
+export function calculateRate(
   model: Model,
   value: number,
   plan: Plan,
 ): Dinero.Dinero {
   let price = Dinero({ amount: 0 });
-
   if (plan === GLOBAL_PLAN) {
     switch (model) {
       case models.audi:
@@ -77,7 +63,7 @@ export function calculatePrice(
   return price;
 }
 
-export function formatPrice(price: Dinero.Dinero): string {
+export function formatBelgiumStyle(price: Dinero.Dinero): string {
   //TODO check if there is no better way to format to Belgium Style
   return (
     price

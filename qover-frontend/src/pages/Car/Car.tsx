@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Car.module.css';
 import { InputNumber, Select, Form } from 'antd';
-import { models } from '../../helpers/quoteHelpers';
 import { useHistory } from 'react-router-dom';
 import { PATH_QUOTE } from '../../App';
+import { models } from '../../constants';
 
 const { Option } = Select;
 
-const availableCars = [models.audi, models.bmw, models.porsche].sort();
+const availableCars = Object.values(models).sort();
 
 const MIN_PRICE = 5000;
 const MIN_AGE = 18;
@@ -112,10 +112,6 @@ const Car: React.FC = () => {
               </Select>
             </Form.Item>
           </div>
-
-          <label htmlFor="basic_car" title="car" className={styles.label}>
-            Car
-          </label>
 
           <div>
             <label htmlFor="basic_price" title="price" className={styles.label}>

@@ -19,3 +19,11 @@ code {
   --blue-grey: #5b7289;
   --blue-grey-sub: #317bda;
 }
+
+button:focus {
+  outline: none;
+}
+
+.ant-switch-checked {
+  background-color: var(--white-20) !important;
+}
