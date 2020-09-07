@@ -60,6 +60,7 @@ const Quote: React.FC = () => {
         <QuoteDetail
           rate={rateGlobal}
           type={GLOBAL_PLAN}
+          paymentPlan={selectedPaymentPlan}
           selected={selectedPlan === GLOBAL_PLAN}
           className={styles.quoteDetail}
           onSelectedPlan={setSelectedPlan}
@@ -67,6 +68,7 @@ const Quote: React.FC = () => {
         <QuoteDetail
           rate={rateUniverse}
           type={UNIVERSAL_PLAN}
+          paymentPlan={selectedPaymentPlan}
           selected={selectedPlan === UNIVERSAL_PLAN}
           className={styles.quoteDetail}
           onSelectedPlan={setSelectedPlan}

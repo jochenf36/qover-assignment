@@ -3,13 +3,14 @@ import styles from './QuoteDetail.module.css';
 import { CheckCircleTwoTone } from '@ant-design/icons';
 import { formatBelgiumStyle } from '../../helpers/quoteHelpers';
 import Dinero from 'dinero.js';
-import { Plan } from '../../types';
+import { Plan, Model } from '../../types';
 import { UNIVERSAL_PLAN, GLOBAL_PLAN } from '../../constants';
 
 export interface QuoteDetailProps {
   selected?: boolean;
   type: Plan;
   rate: Dinero.Dinero;
+  paymentPlan: Model;
   onSelectedPlan: (plan: Plan) => void;
   className?: string;
 }
@@ -35,6 +36,7 @@ const QuoteDetail: React.FC<QuoteDetailProps> = ({
   selected,
   type = GLOBAL_PLAN,
   rate = Dinero({ amount: 0 }),
+  paymentPlan,
   onSelectedPlan,
   className,
 }) => {
@@ -63,7 +65,7 @@ const QuoteDetail: React.FC<QuoteDetailProps> = ({
       <div className={stylesPrice.join(' ')}>
         <span className={styles.priceNumber}>{formatBelgiumStyle(rate)}</span>
         <span className={styles.currencySign}>€</span>
-        <div className={styles.priceSub}>YEARLY incl. taxes</div>
+        <div className={styles.priceSub}>{paymentPlan} incl. taxes</div>
       </div>
       <div className={styles.infoItem}>
         Maximum duration travel of <span>{content[type].durationTravel} </span>
