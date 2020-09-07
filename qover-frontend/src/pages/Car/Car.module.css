@@ -52,7 +52,7 @@
 }
 
 .formItem {
-  display: inline-block;
+  display: inline-block !important;
   margin-bottom: 20px;
 }
 
