@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import styles from './App.module.css';
-import SignIn from './pages/SignIn/SignIn.lazy';
-import Car from './pages/Car/Car.lazy';
-import Quote from './pages/Quote/Quote.lazy';
+import SignIn from './pages/SignIn/SignIn';
+import Car from './pages/Car/Car';
+import Quote from './pages/Quote/Quote';
 import Footer from './components/Footer/Footer';
 
 const PATH_ROOT = '/';
