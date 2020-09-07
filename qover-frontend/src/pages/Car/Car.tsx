@@ -85,10 +85,10 @@ const Car: React.FC = () => {
             <Form.Item
               className={styles.formItem}
               name="age"
-              rules={[validateAge, validateAgeWithCar]}
+              rules={[validateAge, validateAgeWithCar, { required: true }]}
               validateTrigger=""
             >
-              <InputNumber className={styles.input} />
+              <InputNumber className={styles.input} min={0} max={120} />
             </Form.Item>
           </div>
 
@@ -100,7 +100,7 @@ const Car: React.FC = () => {
             <Form.Item
               name="car"
               className={styles.formItem}
-              rules={[validateCarWithAge]}
+              rules={[validateCarWithAge, { required: true }]}
               validateTrigger=""
             >
               <Select className={styles.carSelect}>
@@ -120,10 +120,12 @@ const Car: React.FC = () => {
             <Form.Item
               className={styles.formItem}
               name="price"
-              rules={[validatePrice]}
+              rules={[validatePrice, { required: true }]}
               validateTrigger=""
             >
               <InputNumber
+                min={0}
+                max={999999999}
                 className={styles.priceInput}
                 parser={(value = '') => value.replace(/€\s?|(,*)/g, '')}
               />
