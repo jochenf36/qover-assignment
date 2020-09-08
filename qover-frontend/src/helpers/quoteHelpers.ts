@@ -19,7 +19,7 @@ export function calculateRate(
 ): Dinero.Dinero {
   let price = Dinero({ amount: 0 });
   if (plan === GLOBAL_PLAN) {
-    switch (model) {
+    switch (model.toUpperCase()) {
       case models.audi:
         price = Dinero({ amount: AUDI_DEFAULT, currency: EUR });
         break;
@@ -34,7 +34,7 @@ export function calculateRate(
     }
   } else {
     const valueDinero = value * 100;
-    switch (model) {
+    switch (model.toUpperCase()) {
       case models.audi:
         price = Dinero({ amount: AUDI_DEFAULT, currency: EUR }).add(
           Dinero({ amount: valueDinero, currency: EUR }).percentage(

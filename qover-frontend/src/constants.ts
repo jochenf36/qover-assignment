@@ -9,7 +9,7 @@ export const GLOBAL_PLAN: Plan = 'global' as Plan;
 export const UNIVERSAL_PLAN: Plan = 'universal' as Plan;
 
 export const models = {
-  audi: 'Audi' as Model,
+  audi: 'AUDI' as Model,
   bmw: 'BMW' as Model,
-  porsche: 'Porsche' as Model,
+  porsche: 'PORSCHE' as Model,
 };
